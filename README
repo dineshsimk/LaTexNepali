@@ -1,0 +1,4 @@
+By default LaTex doesn't support devenagari script, you have to provide the devanagari text is transliteration form (details about transliterated form at http://tex.loria.fr/fontes/devanagari.ps.gz). So this class helps to translate Nepali texts to LaTex compatible transliteration form
+
+Tutorial using Using Devanagari in Latex at:
+http://pravin.insanitybegins.com/posts/using-devanagari-in-latex
