@@ -18,9 +18,9 @@ public class UnicodeToLatexRoman {
 						!(st.charAt(i+1) >= '\u093E' && st.charAt(i+1) <= '\u094D')) {					
 					temp.append(romanMap.get(st.charAt(i)) + "a");					
 				
-				} else if(!romanMap.containsKey(st.charAt(i))){
+				}else if(!romanMap.containsKey(st.charAt(i))){
 					temp.append(st.charAt(i));
-				} else {
+				}else {
 					temp.append(romanMap.get(st.charAt(i)));
 				}
 			}
