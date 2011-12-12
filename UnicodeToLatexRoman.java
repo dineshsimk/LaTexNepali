@@ -5,7 +5,7 @@ public class UnicodeToLatexRoman {
 	private static Map<Character, String> romanMap;
 	
 	private String LatexRoman(String str) {
-		String temp = "";
+		StringBuilder temp = new StringBuilder();
 		String[] strs = str.trim().split(" ");
 		int length = 0;
 		for(String st:strs) {
@@ -14,17 +14,17 @@ public class UnicodeToLatexRoman {
 			for(int i=0; i<length-1; i++) {
 				if((st.charAt(i) >= '\u0915' && st.charAt(i) <= '\u093B') &&
 						!(st.charAt(i+1) >= '\u093E' && st.charAt(i+1) <= '\u094D')){					
-					temp += romanMap.get(st.charAt(i)) + "a";					
+					temp.append(romanMap.get(st.charAt(i)) + "a");					
 				
 				}else if(!romanMap.containsKey(st.charAt(i))){
-					temp += st.charAt(i);
+					temp.append(st.charAt(i));
 				}else {
-					temp += romanMap.get(st.charAt(i));
+					temp.append(romanMap.get(st.charAt(i)));
 				}
 			}
-			temp += " ";
+			temp.append(" ");
 		}
-		return temp;
+		return temp.toString();
 	}
 	
 	public static void main(String[] args) {
