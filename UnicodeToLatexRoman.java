@@ -5,20 +5,22 @@ public class UnicodeToLatexRoman {
 	private static Map<Character, String> romanMap;
 	
 	private String LatexRoman(String str) {
+		
 		StringBuilder temp = new StringBuilder();
 		String[] strs = str.trim().split(" ");
 		int length = 0;
+		
 		for(String st:strs) {
 			st += " ";
 			length = st.length();
 			for(int i=0; i<length-1; i++) {
-				if((st.charAt(i) >= '\u0915' && st.charAt(i) <= '\u093B') &&
-						!(st.charAt(i+1) >= '\u093E' && st.charAt(i+1) <= '\u094D')){					
+				if ((st.charAt(i) >= '\u0915' && st.charAt(i) <= '\u093B') &&
+						!(st.charAt(i+1) >= '\u093E' && st.charAt(i+1) <= '\u094D')) {					
 					temp.append(romanMap.get(st.charAt(i)) + "a");					
 				
-				}else if(!romanMap.containsKey(st.charAt(i))){
+				} else if(!romanMap.containsKey(st.charAt(i))){
 					temp.append(st.charAt(i));
-				}else {
+				} else {
 					temp.append(romanMap.get(st.charAt(i)));
 				}
 			}
@@ -104,8 +106,8 @@ public class UnicodeToLatexRoman {
 		romanMap.put('\u0937', ".s"); // ष				
 		romanMap.put('स', "s");
 		romanMap.put('ह', "h");
-		romanMap.put('\u095C', "R"); // ड़
-		romanMap.put('\u095D', "Rh"); // ढ़
+		romanMap.put('\u095C', "R"); // ड़
+		romanMap.put('\u095D', "Rh"); // ढ़
 		
 		//numerals
 		romanMap.put('१', "1");
@@ -120,11 +122,11 @@ public class UnicodeToLatexRoman {
 		romanMap.put('०', "0");
 		
 		//other characters
-		romanMap.put('\u095E',  "f"); // फ़		
-		romanMap.put('\u095B',  "z"); // ज़		
-		romanMap.put('\u0959', ".K"); // ख़		
-		romanMap.put('\u095A', ".g"); // ग़		
-		romanMap.put('\u0958',  "q"); // क़			
+		romanMap.put('\u095E',  "f"); // फ़		
+		romanMap.put('\u095B',  "z"); // ज़		
+		romanMap.put('\u0959', ".K"); // ख़		
+		romanMap.put('\u095A', ".g"); // ग़		
+		romanMap.put('\u0958',  "q"); // क़			
 		romanMap.put('ॐ', ".o"); 
 		romanMap.put('\u093D', ".a"); // ऽ		
 		//romanMap.put('-', "k");
