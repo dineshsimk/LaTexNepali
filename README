@@ -3,5 +3,9 @@ By default LaTex doesn't support devenagari script, you have to provide the deva
 Tutorial using Using Devanagari in Latex at:
 http://pravin.insanitybegins.com/posts/using-devanagari-in-latex
 
+
 Usage
+----------------------
+after compiling the code (i.e. javac NepaliToLatex.java)
+run the following command,
 $>java NepaliToLatex "<Unicode neplai text to transliterate>"
